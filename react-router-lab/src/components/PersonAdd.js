@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import Notification from './Notification';
 
 
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 const PersonAdd = ({ onPersonAdded = () => { } }) => {
+  const API_URL = process.env.REACT_APP_API_URL;
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const navigate = useNavigate();

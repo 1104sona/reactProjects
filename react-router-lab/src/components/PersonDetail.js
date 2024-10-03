@@ -5,11 +5,13 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Notification from './Notification';
 
-import '../styles/PersonDetail.css'; // Component-specific styles
+//import '../styles/PersonDetail.css'; // Component-specific styles
 
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 const PersonDetail = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const { id } = useParams();
   const navigate = useNavigate();
   const [person, setPerson] = useState(null);

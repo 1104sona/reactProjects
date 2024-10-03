@@ -6,9 +6,10 @@ import axios from 'axios';
 
 import '../styles/PersonEdit.css'; // Component-specific styles
 
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 const PersonEdit = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
   const { id } = useParams();
   const navigate = useNavigate();
   const [person, setPerson] = useState({ name: '', age: '' });
