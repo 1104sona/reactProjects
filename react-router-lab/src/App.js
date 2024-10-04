@@ -6,7 +6,12 @@ import PersonList from './components/PersonList';
 import PersonDetail from './components/PersonDetail';
 import PersonAdd from './components/PersonAdd';
 import PersonEdit from './components/PersonEdit';
+import Notification from './components/Notification';
+//  import Notfound from './components/NotFound';
+
 import './App.css'; // Global styles
+import NotFound from './components/NotFound';
+
 
 const App = () => {
     return (
@@ -15,10 +20,12 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<PersonList />} />
                     <Route path="/add" element={<PersonAdd />} />
-                    <Route path="/edit/:id" element={<PersonEdit />} />
-                    <Route path="/person/:id" element={<PersonDetail />} />
-                </Routes>
-            </div>
+                    <Route path="/edit" element={<PersonEdit />} />
+                    <Route path="/person" element={<PersonDetail />} />
+                    <Route path="/notification" element={<Notification/>} />
+                    <Route path="/notfound" element={<NotFound />} />
+                   </Routes>
+                     </div>
         </Router>
     );
 };
